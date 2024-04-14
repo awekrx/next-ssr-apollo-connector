@@ -1,0 +1,52 @@
+{
+  "name": "next-ssr-apollo-connector",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "engineStrict": true,
+  "engines": {
+    "node": "^20.12",
+    "npm": "^10.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "pretty": "prettier --write . --log-level warn",
+    "lint": "eslint . --fix",
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier",
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@apollo/client": "^3.9.11",
+    "graphql": "^16.8.1"
+  },
+  "devDependencies": {
+    "@cspell/eslint-plugin": "^8.6.1",
+    "@types/node": "^20.12.5",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-typescript-sort-keys": "^3.2.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  }
+}

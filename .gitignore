@@ -1,0 +1,6 @@
+node_modules
+next-env.d.ts
+.next
+.DS_Store
+
+lib
