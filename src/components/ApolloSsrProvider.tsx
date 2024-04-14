@@ -5,7 +5,7 @@ import {
   ApolloProvider,
   NormalizedCacheObject,
 } from '@apollo/client';
-import { FC, PropsWithChildren } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 
 type Props = PropsWithChildren<{
   apolloClient: ApolloClient<NormalizedCacheObject>;

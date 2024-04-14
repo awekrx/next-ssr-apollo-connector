@@ -1,10 +1,9 @@
 import {
   ApolloClient,
   ApolloClientOptions,
-  InMemoryCache,
   NormalizedCacheObject,
 } from '@apollo/client';
-import { FC, PropsWithChildren } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 
 import { ApolloSsrCacheTransfer, ApolloSsrProvider } from './components';
 import { config } from './config';
@@ -17,8 +16,8 @@ export const createApolloSsrClient = (
   const apolloClient = new ApolloClient({
     ...options,
     cache: isServer
-      ? new InMemoryCache()
-      : new InMemoryCache().restore(window.__APOLLO_STATE__),
+      ? options.cache
+      : options.cache.restore(window.__APOLLO_STATE__),
   });
 
   const ApolloProvider: FC<PropsWithChildren> = (props) => {

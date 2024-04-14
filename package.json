@@ -1,7 +1,8 @@
 {
   "name": "next-ssr-apollo-connector",
+  "description": "This package conveniently integrates Next.js, Apollo Client, and server-side rendering.",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "engineStrict": true,
@@ -13,7 +14,7 @@
     "build": "tsc",
     "pretty": "prettier --write . --log-level warn",
     "lint": "eslint . --fix",
-    "postinstall": "husky install"
+    "husky": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -48,5 +49,24 @@
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awekrx/next-ssr-apollo-connector"
+  },
+  "keywords": [
+    "graphql",
+    "apollo",
+    "nextjs",
+    "graphql-ssr",
+    "apollo-ssr",
+    "nextjs-ssr"
+  ],
+  "bugs": {
+    "url": "https://github.com/awekrx/next-ssr-apollo-connector/issues"
+  },
+  "homepage": "https://github.com/awekrx/next-ssr-apollo-connector/#readme",
+  "files": [
+    "lib/**/*"
+  ]
 }
